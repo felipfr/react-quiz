@@ -1,0 +1,131 @@
+*,
+*::after,
+*::before {
+    box-sizing: border-box;
+}
+
+html {
+    font-family: 'Fira Code', monospace;
+    font-family: 'Open Sans', sans-serif;
+    --font-size: 1.2rem;
+    --color: rgb(0, 0, 0);
+    --color-light: rgb(255, 255, 255);
+    --radius: 0.2rem;
+}
+
+body {
+    margin: 1.5rem;
+    -webkit-user-select: none;  /* Chrome, Safari, Opera */
+    -moz-user-select: none;     /* Firefox */
+    -ms-user-select: none;      /* IE 10+ */
+    user-select: none;
+}
+
+body,
+input,
+textarea,
+button {
+    font-size: var(--font-size);
+    font-family: var(--font);
+}
+
+h1,
+h2,
+h3 {
+    font-family: var(--font-title);
+}
+
+h1,
+h2,
+h3,
+p,
+ul {
+    margin: 1rem 0;
+}
+
+ul {
+    list-style: square;
+}
+
+li {
+    margin-bottom: 0.5rem;
+}
+
+label {
+    display: block;
+    margin-bottom: 0.25rem;
+}
+
+input[type="text"],
+input[type="password"],
+input[type="email"],
+textarea {
+    display: block;
+    border: 1px solid #ccc;
+    width: 100%;
+    padding: 0.8rem;
+    border-radius: var(--radius);
+    background: #eee;
+    transition: 0.2s;
+}
+
+input[type="text"]:focus,
+input[type="password"]:focus,
+input[type="email"]:focus,
+textarea:focus {
+    outline: none;
+    border-color: var(--color);
+    background: white;
+    box-shadow: 0 0 0 3px var(--color-light);
+}
+
+button {
+    cursor: pointer;
+    border: none;
+    border-radius: var(--radius);
+    transition: 0.1s;
+    background: var(--color);
+    color: var(--color-light);
+    padding: 0.8rem 1.6rem;
+}
+
+button:hover,
+button:focus {
+    background: var(--color);
+    box-shadow: 0 0 0 3px var(--color-light), 0 0 0 4px var(--color);
+    outline: none;
+}
+
+button:active {
+    box-shadow: 0 0 0 3px var(--color), 0 0 0 4px var(--color);
+}
+
+button:disabled {
+    opacity: 0.5;
+    cursor: not-allowed;
+}
+
+hr {
+    border: 2px solid black;
+    margin: 2rem auto;
+}
+
+.box {
+    margin-top: 50px;
+    border: 2px solid #efefef;
+    padding: 20px;
+}
+
+.box legend {
+font-weight: bold;
+}
+
+.answer {
+    margin: 20px 0 0 20px;
+}
+
+.options {
+    display: block;
+    min-height: 1.5rem;
+    margin-bottom: .125rem;
+}
